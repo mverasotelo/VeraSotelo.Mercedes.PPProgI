@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1621291717 source:c:\users\mer-v\downloads\code blocks\verasotelo. pp_programacioni\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
