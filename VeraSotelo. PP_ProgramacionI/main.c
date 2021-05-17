@@ -23,7 +23,7 @@ int main()
 
     //Punto 2
     char cadena[200]="Cadena de caracteres para probar la funcion";
-    printf("Cantidad de veces que aparece el caracter en la cadena: %d\n", contarCaracteres(cadena,'a'));
+    printf("Cantidad de veces que aparece el caracter en la cadena: %d\n\n", contarCaracteres(cadena,'a'));
 
     //Punto 3
     eNotebook notebooks[5]={
@@ -77,7 +77,7 @@ int ordenarNotebooks(eNotebook notebooks[], int tam){
     if(notebooks!=NULL && tam>0){
         for(int i=0; i<tam-1;i++){
             for(int j=1; j<tam; j++){
-                if((strcmp(notebooks[i].marca,notebooks[j].marca)>0)||
+                if((strcmp(notebooks[i].marca,notebooks[j].marca)>=0)||
                    ((strcmp(notebooks[i].marca,notebooks[j].marca)==0)&&(notebooks[i].precio>notebooks[j].precio))){
                         aux=notebooks[i];
                         notebooks[i]=notebooks[j];
