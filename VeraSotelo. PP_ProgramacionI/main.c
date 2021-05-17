@@ -36,13 +36,6 @@ int main()
 
     ordenarNotebooks(notebooks, TAM);
 
-    for(int i=0;i<TAM;i++){
-        printf("%s, $%.2f\n", notebooks[i].marca, notebooks[i].precio);
-    }
-
-    return 0;
-}
-
 /*1. Crear una función llamada aplicarDescuento que reciba como parámetro el precio de un producto
 y devuelva el valor del producto con un descuento del 5%. Realizar la llamada desde el main. *
 */
