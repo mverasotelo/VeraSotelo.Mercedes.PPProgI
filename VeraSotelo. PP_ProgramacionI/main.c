@@ -34,7 +34,20 @@ int main()
     {5,"Toshiba","Intel i3",35000},
     };
 
+    for(int i=0;i<TAM;i++){
+        printf("%s, $%.2f\n", notebooks[i].marca, notebooks[i].precio);
+    }
+    printf("\n");
+
+
     ordenarNotebooks(notebooks, TAM);
+
+    for(int i=0;i<TAM;i++){
+        printf("%s, $%.2f\n", notebooks[i].marca, notebooks[i].precio);
+    }
+
+    return 0;
+}
 
 /*1. Crear una función llamada aplicarDescuento que reciba como parámetro el precio de un producto
 y devuelva el valor del producto con un descuento del 5%. Realizar la llamada desde el main. *
@@ -69,12 +82,12 @@ int ordenarNotebooks(eNotebook notebooks[], int tam){
     eNotebook aux;
     if(notebooks!=NULL && tam>0){
         for(int i=0; i<tam-1;i++){
-            for(int j=1; j<tam; j++){
-                if((strcmp(notebooks[i].marca,notebooks[j].marca)>=0)||
+            for(int j=i+1; j<tam; j++){
+                if((strcmp(notebooks[i].marca,notebooks[j].marca)>0)||
                    ((strcmp(notebooks[i].marca,notebooks[j].marca)==0)&&(notebooks[i].precio>notebooks[j].precio))){
-                        aux=notebooks[i];
-                        notebooks[i]=notebooks[j];
-                        notebooks[j]=aux;
+                    aux=notebooks[i];
+                    notebooks[i]=notebooks[j];
+                    notebooks[j]=aux;
                 }
             }
         }
